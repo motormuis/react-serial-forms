@@ -17,13 +17,6 @@ export default class InputField extends InputBase {
    * @return {void}
    */
   getInitialValue() {
-    if (this.props.type === 'radio') {
-      if (this.props.checked) {
-        return this.props.value;
-      } else {
-        return '';
-      }
-    }
     return super.getInitialValue();
   }
 
