@@ -17808,8 +17808,11 @@ var InputField = function (_InputBase) {
   }, {
     key: 'render',
     value: function render() {
-      var attrs = this.attrs();
       var errMessage = _react2.default.createElement('span', null);
+
+      var attrs = Object.assign({}, this.attrs());
+      delete attrs.initialValue;
+      delete attrs.validation;
 
       if (attrs.className) {
         attrs.className += ' ' + this.getClassName();
@@ -17938,7 +17941,9 @@ var SelectField = function (_InputBase) {
     key: 'render',
     value: function render() {
       var errMessage = _react2.default.createElement('span', null);
-      var attrs = this.attrs();
+      var attrs = Object.assign({}, this.attrs());
+      delete attrs.initialValue;
+      delete attrs.validation;
 
       if (attrs.className) {
         attrs.className += ' ' + this.getClassName();
@@ -18029,7 +18034,9 @@ var TextareaField = function (_InputBase) {
     key: 'render',
     value: function render() {
       var errMessage = _react2.default.createElement('span', null);
-      var attrs = this.attrs();
+      var attrs = Object.assign({}, this.attrs());
+      delete attrs.initialValue;
+      delete attrs.validation;
 
       if (attrs.className) {
         attrs.className += ' ' + this.getClassName();
