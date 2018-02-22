@@ -17811,8 +17811,8 @@ var InputField = function (_InputBase) {
       var errMessage = _react2.default.createElement('span', null);
 
       var attrs = Object.assign({}, this.attrs());
-      delete attrs.initialValue;
-      delete attrs.validation;
+      attrs['data-initialValue'] = attrs.initialValue;
+      attrs['data-validation'] = attrs.validation;
 
       if (attrs.className) {
         attrs.className += ' ' + this.getClassName();
