@@ -65,7 +65,7 @@ export default class InputField extends InputBase {
    * @return {object} ReactElement
    */
   render() {
-    const attrs = this.attrs();
+    const { validation, initialValue, ...attrs} = this.attrs();
     let errMessage = <span />;
 
     if (attrs.className) {
