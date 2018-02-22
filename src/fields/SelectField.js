@@ -58,7 +58,7 @@ export default class SelectField extends InputBase {
    */
   render() {
     let errMessage = <span />;
-    const attrs = this.attrs();
+    const { validation, initialValue, ...attrs} = this.attrs();
 
     if (attrs.className) {
       attrs.className += ` ${this.getClassName()}`;
