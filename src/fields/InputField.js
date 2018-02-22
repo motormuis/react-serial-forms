@@ -68,8 +68,8 @@ export default class InputField extends InputBase {
     let errMessage = <span />;
 
     const attrs = Object.assign({}, this.attrs());
-    attrs['data-initialValue'] = attrs.initialValue;
-    attrs['data-validation'] = attrs.validation;
+    delete attrs.initialValue;
+    delete attrs.validation;
 
     if (attrs.className) {
       attrs.className += ` ${this.getClassName()}`;
