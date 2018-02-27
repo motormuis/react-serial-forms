@@ -47,6 +47,7 @@ export const destroyInput = function(formName, inputName) {
 };
 
 export const inputValue = function(formName, inputName, value) {
+  console.log('inputValue --> formName[' + formName + '] inputName[' + inputName + '] value[' + value + ']');
   const { form } = _getInputValueAndEvent(formName);
   if (value !== undefined) {
     form[inputName].value = value;
