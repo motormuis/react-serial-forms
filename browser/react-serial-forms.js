@@ -18374,16 +18374,8 @@ var destroyInput = exports.destroyInput = function destroyInput(formName, inputN
 };
 
 var inputValue = exports.inputValue = function inputValue(formName, inputName, value) {
-  console.log('inputValue --> formName[' + formName + '] inputName[' + inputName + '] value[' + value + ']');
-
   var _getInputValueAndEven2 = _getInputValueAndEvent(formName),
       form = _getInputValueAndEven2.form;
-
-  console.log('form? ', form);
-
-  if (form !== undefined) {
-    console.log('form[' + inputName + ']? ', form[inputName]);
-  }
 
   if (value !== undefined) {
     if (form !== undefined && form[inputName] !== undefined) {

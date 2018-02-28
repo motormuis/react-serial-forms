@@ -47,14 +47,7 @@ export const destroyInput = function(formName, inputName) {
 };
 
 export const inputValue = function(formName, inputName, value) {
-  console.log('inputValue --> formName[' + formName + '] inputName[' + inputName + '] value[' + value + ']');
   const { form } = _getInputValueAndEvent(formName);
-  console.log('form? ', form);
-
-  if (form !== undefined) {
-    console.log('form[' + inputName + ']? ', form[inputName]);
-  }
-
   if (value !== undefined) {
     if (form !== undefined && form[inputName] !== undefined) { // support dynamic forms
       form[inputName].value = value;
