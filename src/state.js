@@ -62,6 +62,10 @@ export const validateForm = function(formName, onComplete = () => {}) {
   const { form } = _getInputValueAndEvent(formName);
   const errors = [];
   const len = size(form);
+  if (len === 0) { // no fields to validate, indicate we're done
+    onComplete();
+  }
+
   let i = 0;
   const fieldValidated = (err) => {
     if (err) {
