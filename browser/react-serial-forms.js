@@ -18396,6 +18396,11 @@ var validateForm = exports.validateForm = function validateForm(formName) {
 
   var errors = [];
   var len = (0, _lodash.size)(form);
+  if (len === 0) {
+    // no fields to validate, indicate we're done
+    onComplete();
+  }
+
   var i = 0;
   var fieldValidated = function fieldValidated(err) {
     if (err) {
